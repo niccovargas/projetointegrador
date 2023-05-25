@@ -13,22 +13,23 @@ public class Aluno {
     private int idAluno;
     private String nome;
     private int matricula;
-    private int serie;
     private String turma;
-    
-    
-    public Aluno (){
+    private String projeto;
         
+    
+    
+    public Aluno (){       
     }
 
-    public Aluno(String nome, int matricula, int serie, String turma, int idAluno) {
+    public Aluno(int idAluno, String nome, int matricula, String turma, String projeto) {
+        this.idAluno = idAluno;
         this.nome = nome;
         this.matricula = matricula;
-        this.serie = serie;
         this.turma = turma;
-        this.idAluno = idAluno;
+        this.projeto = projeto;
     }
 
+        
     public String getNome() {
         return nome;
     }
@@ -45,12 +46,12 @@ public class Aluno {
         this.matricula = matricula;
     }
 
-    public int getSerie() {
-        return serie;
+   public int getIdAluno() {
+        return idAluno;
     }
 
-    public void setSerie(int serie) {
-        this.serie = serie;
+    public void setIdAluno(int idAluno) {
+        this.idAluno = idAluno;
     }
 
     public String getTurma() {
@@ -61,17 +62,18 @@ public class Aluno {
         this.turma = turma;
     }
 
-    public int getIdAluno() {
-        return idAluno;
+    public String getProjeto() {
+        return projeto;
     }
 
-    public void setIdAluno(int idAluno) {
-        this.idAluno = idAluno;
+    public void setProjeto(String projeto) {
+        this.projeto = projeto;
     }
+    
 
     @Override
     public String toString() {
-        return "\n-- Aluno --" + "\nidAluno: \t" + idAluno + "\nNome: \t" + nome + "\nMatricula: \t" + matricula + "\nSerie: \t" + serie + "\nTurma: \t" + turma ;
+        return "\n-- Aluno --" + "\nidAluno: \t" + idAluno + "\nNome: \t" + nome + "\nMatricula: \t" + matricula + "\nTurma: \t" + turma + "\nProjeto: \t" + projeto;
     }
 
     
