@@ -1,0 +1,1 @@
+select max(idAluno) as IdLast from alunos;

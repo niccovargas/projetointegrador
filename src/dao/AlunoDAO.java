@@ -111,4 +111,21 @@ public class AlunoDAO {
                     + e.getMessage());
         }
     }
+    public int getIdLast () {
+        int id = 0;
+        try {
+            Connection con = conexao.getConexao();
+            String sql = "select max(idAluno) as IdLast from alunos;";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()){
+                // lado do java |x| lado do banco
+                id = rs.getInt("idLast");
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao buscar id.\n"
+                    + e.getMessage());
+        }
+        return id;
+    }
 }

@@ -32,10 +32,13 @@ public class AlunoServicos {
         AlunoDAO aDAO = DAOFactory.getAlunoDAO();
         aDAO.atualizarAlunoDAO(pVO);
     }
-    
     public void deletarAluno(String matricula){
         AlunoDAO aDAO = DAOFactory.getAlunoDAO();
         aDAO.deletarAlunoDAO(matricula);
+    }
+    public int getIdLast (){
+        AlunoDAO aDAO = DAOFactory.getAlunoDAO();
+        return aDAO.getIdLast();
     }
 }
  
