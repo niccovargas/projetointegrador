@@ -13,9 +13,9 @@ import model.Aluno;
  * @author 631610260
  */
 public class AlunoServicos {
-    public void cadastroAluno(Aluno pVO){
+    public void cadastroAluno(Aluno aVO){
         AlunoDAO aDAO = DAOFactory.getAlunoDAO();
-        aDAO.cadastrarAlunoDAO(pVO);
+        aDAO.cadastrarAlunoDAO(aVO);
     }
     
     public ArrayList<Aluno> getAlunos(){
@@ -28,9 +28,9 @@ public class AlunoServicos {
         return aDAO.getAlunoByDoc(matricula);
     }
     
-    public void atualizarAluno(Aluno pVO){
+    public void atualizarAluno(Aluno aVO){
         AlunoDAO aDAO = DAOFactory.getAlunoDAO();
-        aDAO.atualizarAlunoDAO(pVO);
+        aDAO.atualizarAlunoDAO(aVO);
     }
     public void deletarAluno(String matricula){
         AlunoDAO aDAO = DAOFactory.getAlunoDAO();

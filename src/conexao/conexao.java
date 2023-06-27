@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * @author 631610260
  */
 public class conexao {
-    private static String host = "jdbc:mysql://localhost:3306/TurmasEscolares";
+    private static String host = "jdbc:mysql://localhost:3306/aluno";
     private static String user = "root";
     private static String pass = "";
     public static Connection getConexao() throws SQLException {
